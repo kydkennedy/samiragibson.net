@@ -11,6 +11,7 @@
     "aframe": "^1.4.2",
     "aframe-extras": "^7.0.0",
     "animejs": "^3.2.1",
+    "bootstrap": "^5.3.0",
     "core-js": "^3.8.3",
     "three": "^0.153.0",
     "vue": "^3.2.13"

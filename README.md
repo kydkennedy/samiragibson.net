@@ -1,4 +1,4 @@
-# client
+# Personal portfolio site 
 
 ## Project setup
 ```
