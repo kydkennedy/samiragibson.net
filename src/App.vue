@@ -14,15 +14,6 @@
 </div>
 </template>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ43NVFXY9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QZ43NVFXY9');
-</script>
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
