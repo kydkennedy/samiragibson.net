@@ -4,7 +4,7 @@ module.exports = defineConfig({
 })
 
 // set up multiple pages in vue 
-module.exports ={
+/*module.exports ={
   pages: {
     index: {
       entry: 'src/index.js',
@@ -33,4 +33,4 @@ module.exports ={
       chunks: ['chunk-vendors', 'chunk-common', 'contact']
     }
 }
-}
+}*/
