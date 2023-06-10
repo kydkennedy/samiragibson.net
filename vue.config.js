@@ -4,7 +4,7 @@ module.exports = defineConfig({
 })
 
 // set up multiple pages in vue 
-/*module.exports ={
+module.exports ={
   pages: {
     index: {
       entry: 'src/index.js',
@@ -13,24 +13,34 @@ module.exports = defineConfig({
       chunks: ['chunk-vendors', 'chunk-common', 'index']
     },
     about: {
-      entry: 'src/about.js',
+      entry: 'src/pages/about.js',
       template: 'public/about.html',
       title: 'About',
       chunks: ['chunk-vendors', 'chunk-common', 'about']
   },
 
     projects: {
-      entry: 'src/projects.js',
-      template: 'public/projects.html',
+      entry: 'src/pages/work.js',
+      template: 'public/work.html',
       title: 'Projects',
       chunks: ['chunk-vendors', 'chunk-common', 'projects']
-  },
+  }
 
-    contact: {
+   /* contact: {
       entry: 'src/contact.js',
       template: 'public/contact.html',
       title: 'Contact',
       chunks: ['chunk-vendors', 'chunk-common', 'contact']
-    }
+    }*/
 }
+/*module.exports = {
+  css: {
+    loaderOptions: {
+      sass: {
+        prependData: '@import "@/styles/_variables.scss";'
+      }
+    }
+  }
 }*/
+
+}
