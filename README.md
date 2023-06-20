@@ -1,4 +1,4 @@
-# Personal portfolio site 
+# samiragibson.net
 
 ## Project setup
 ```

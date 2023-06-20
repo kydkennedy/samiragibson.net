@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunksamiragibson_net"]=self["webpackChunksamiragibson_net"]||[]).push([[631],{3782:function(n,t,a){a.r(t),a.d(t,{default:function(){return l}});var s=a(3396);const c={class:"contact"},e=(0,s._)("h1",null,"This is a contact page",-1),r=[e];function i(n,t){return(0,s.wg)(),(0,s.iD)("div",c,r)}var u=a(89);const o={},f=(0,u.Z)(o,[["render",i]]);var l=f}}]);
+//# sourceMappingURL=contact.ea40a670.js.map
