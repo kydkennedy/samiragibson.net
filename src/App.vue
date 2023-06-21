@@ -1,22 +1,24 @@
 <template>
-  <div class="bg-image">
-    <NewsTicker item1="Redesign in progress..." item2="Please mind the gap." />
+  <div class="container-main">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <div id="main">
-      <nav>
-        <router-link to="/" class="navi">01. Home</router-link>
-        <hr />
-        <router-link to="/about" class="navi">02. About</router-link>
-        <hr />
-        <router-link to="/projects" class="navi">03. Projects</router-link>
-        <hr />
-        <router-link to="/contact" class="navi">04. Contact</router-link>
-        <hr />
-        <router-link to="/blog" class="navi">05. Blog</router-link>
-      </nav>
-      <router-view />
-    </div>
+    <nav>
+      <router-link to="/" class="navi">01. Home</router-link>
+      <hr />
+      <router-link to="/about" class="navi">02. About</router-link>
+      <hr />
+      <router-link to="/projects" class="navi">03. Projects</router-link>
+      <hr />
+      <router-link to="/contact" class="navi">04. Contact</router-link>
+      <!--<hr />
+      <router-link to="/blog" class="navi">05. Blog</router-link>-->
+    </nav>
+    <router-view class="page-content" />
   </div>
+  <NewsTicker
+    item1="Content and UI subject to change throughout iterations of site redesign."
+    item2="Currently enjoying the Neo Brutalist asthetic."
+    item3="If you're reading this, ask me about my favorite Star Trek episodes."
+  />
 </template>
 
 <script>
@@ -38,28 +40,43 @@ body {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  background-image: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  background-color: $bg-color;
+  /*background-image: url("@/assets/nebula_star_trek.jpg");
+  background-clip: border-box;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
+  scroll-behavior: smooth;
+}
+
+html {
+  position: absolute;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 3rem;
+  margin-left: 3%;
+  font-family: $primary-font;
+  font-weight: $bold;
 }
 
-.bg-image {
+p {
+  font-family: $primary-font;
+  font-weight: $light;
+}
+.container-main {
   width: 100%;
   height: 100vh;
-  position: relative;
+  position: fixed;
   box-sizing: border-box;
-  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+  left: 0;
+  right: 0;
 }
 
 #main {
-  display: flex;
-  flex-direction: row;
+  display: block;
+  position: absolute;
 }
 
 #app {
@@ -73,7 +90,6 @@ h1 {
 
 nav {
   padding: 30px;
-  margin-top: 10%;
   display: flex;
   flex-direction: column;
   transform: translate(40%, 0%);
@@ -81,46 +97,63 @@ nav {
   box-sizing: border-box;
   text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
   z-index: 0;
-  background: rgba(15, 15, 15, 0.2);
-  border-radius: 16px;
+  background: rgb($mira-peach, $alpha: 1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 5px solid rgb(0, 0, 0);
+  border-right: 5px solid rgb(0, 0, 0);
+  height: 100vh;
 
   a {
-    font-weight: bold;
-    color: #ffffff;
+    font-family: $primary-font;
+    font-weight: $regular;
+    color: $primary;
     text-decoration: none;
 
     &.router-link-exact-active {
-      color: $tertiary-color;
-      text-decoration: line-through solid 2px
-        rgba($color: #000000, $alpha: 0.75);
+      color: $primary;
+      text-decoration: line-through solid 2px rgba($tertiary-color, $alpha: 1);
     }
   }
   hr {
-    border: 1px solid rgba($color: #ffffff, $alpha: 0.5);
-    height: 2%;
+    border: 1px solid rgba($primary, $alpha: 1);
+    height: 5%;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
   }
   justify-content: center;
 }
 .hello {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-35%, -60%);
+  top: 55%;
+  left: 51%;
+  transform: translate(-30%, -55%);
   padding: 5px;
   border-radius: 5px;
-  color: #ffffff;
+  color: #000000;
   text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
-  /* From https://css.glass */
-  background: rgba(15, 15, 15, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* glassmorphism background*/
+  background: $mira-blue;
+  border-radius: 80px;
+  border-bottom: 23px solid rgb(0, 0, 0);
+  border-right: 15px solid rgb(0, 0, 0);
+  border-top: 6px solid rgb(0, 0, 0);
+  border-left: 9px solid rgb(0, 0, 0);
+  //keep .hello vertically centered
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 80vw;
+  max-height: 75vh;
+  text-align: left;
+  overflow: hidden;
+}
+
+//keep nav and .hello from overlapping
+@media (max-width: 768px) {
+  nav {
+    transform: translate(0%, 0%);
+  }
+  .hello {
+    transform: translate(-30%, -50%);
+  }
 }
 </style>

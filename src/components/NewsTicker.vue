@@ -37,7 +37,7 @@ export default {
 
   100% {
     -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
@@ -50,7 +50,7 @@ export default {
 
   100% {
     -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
@@ -60,13 +60,12 @@ export default {
   width: 100%;
   overflow: hidden;
   height: 2rem;
-  background-color: rgba($secondary, 0.9);
   padding-left: 100%;
   box-sizing: content-box;
-  background: rgba(15, 15, 15, 0.2);
+  background: rgb($mira-yellow, $alpha: 1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  border-top: 5px solid rgb(0, 0, 0);
+  border-bottom: 5px solid rgb(0, 0, 0);
 
   .ticker {
     display: inline-block;
@@ -88,14 +87,15 @@ export default {
       display: inline-block;
       padding: 0 2rem;
       font-size: 1rem;
-      color: white;
+      color: $primary;
+      font-family: $primary-font;
+      font-weight: $regular;
     }
   }
 }
 
 body {
   padding-bottom: 5rem;
-  width: 100%;
 }
 h1,
 h2,

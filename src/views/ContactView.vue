@@ -1,5 +1,21 @@
 <template>
   <div class="contact">
-    <h1>This is a contact page</h1>
+    <ContactForm
+      msg="
+      Wanna chat or make something cool? Let’s get in touch!"
+    />
   </div>
 </template>
+
+<script>
+import ContactForm from "@/components/ContactForm.vue";
+export default {
+  name: "ContactView",
+  props: {
+    msg: String,
+  },
+  components: {
+    ContactForm,
+  },
+};
+</script>
