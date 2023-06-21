@@ -1,167 +1,159 @@
 <template>
-<div id="uc">
-  <!--<img alt="Vue logo" src="./assets/logo.png">-->
-  <div class="mainContent">
-    <HelloWorld class="messages" msg="Sorry it's Slowbro right now..." msg2="I'm currently in the process of redesigning this site. So enjoy this Pokemon and checkout the links below."/>
-</div>
-  
-  <div class="mylinks">
-    <!--<a href="/">Home</a>-->
-    <a href="/about">About</a>
-    <a href="/projects">Projects</a>
-    <!--<a href="mailto: samira.gibsonCHC@gmail.com" method="POST">Contact</a>-->
-    </div>  
-</div>
+  <div class="container-main">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <nav>
+      <router-link to="/" class="navi">01. Home</router-link>
+      <hr />
+      <router-link to="/about" class="navi">02. About</router-link>
+      <hr />
+      <router-link to="/projects" class="navi">03. Projects</router-link>
+      <hr />
+      <router-link to="/contact" class="navi">04. Contact</router-link>
+      <!--<hr />
+      <router-link to="/blog" class="navi">05. Blog</router-link>-->
+    </nav>
+    <router-view class="page-content" />
+  </div>
+  <NewsTicker
+    item1="Content and UI subject to change throughout iterations of site redesign."
+    item2="Currently enjoying the Neo Brutalist asthetic."
+    item3="If you're reading this, ask me about my favorite Star Trek episodes."
+  />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import NewsTicker from "./components/NewsTicker.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    NewsTicker,
+  },
+};
 </script>
 
-<style>
+<style lang="scss">
+@import "@/assets/globalStyles.scss";
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: $bg-color;
+  /*background-image: url("@/assets/nebula_star_trek.jpg");
+  background-clip: border-box;
+  background-size: cover;
+  background-attachment: fixed;*/
+  scroll-behavior: smooth;
+}
+
+html {
+  position: absolute;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-left: 3%;
+  font-family: $primary-font;
+  font-weight: $bold;
+}
+
+p {
+  font-family: $primary-font;
+  font-weight: $light;
+}
+.container-main {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  left: 0;
+  right: 0;
+}
+
+#main {
+  display: block;
+  position: absolute;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 0 auto;
-  letter-spacing: 2px;
+  position: relative;
 }
-.mainContent{
+
+nav {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transform: translate(40%, 0%);
+  position: relative;
+  box-sizing: border-box;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+  z-index: 0;
+  background: rgb($mira-peach, $alpha: 1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid rgb(0, 0, 0);
+  border-right: 5px solid rgb(0, 0, 0);
+  height: 100vh;
+
+  a {
+    font-family: $primary-font;
+    font-weight: $regular;
+    color: $primary;
+    text-decoration: none;
+
+    &.router-link-exact-active {
+      color: $primary;
+      text-decoration: line-through solid 2px rgba($tertiary-color, $alpha: 1);
+    }
+  }
+  hr {
+    border: 1px solid rgba($primary, $alpha: 1);
+    height: 5%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+  }
+  justify-content: center;
+}
+.hello {
+  position: absolute;
+  top: 55%;
+  left: 51%;
+  transform: translate(-30%, -55%);
+  padding: 5px;
+  border-radius: 5px;
+  color: #000000;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
+  /* glassmorphism background*/
+  background: $mira-blue;
+  border-radius: 80px;
+  border-bottom: 23px solid rgb(0, 0, 0);
+  border-right: 15px solid rgb(0, 0, 0);
+  border-top: 6px solid rgb(0, 0, 0);
+  border-left: 9px solid rgb(0, 0, 0);
+  //keep .hello vertically centered
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 80vw;
+  max-height: 75vh;
   text-align: left;
-  margin-left: 10%;
-  margin-right: 48%;
-  color: #ffffff;
-  text-shadow: #2c3e50 0px 1px 3px;
-  margin-top: 15%;
-  margin-bottom: auto;
-}
-html{
-    background-image: url('./assets/under_construction_slowbro.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100% !important;
-    width: 100% !important;
-    overflow-clip-margin: 0px !important;
-    -webkit-overflow-clip-margin: 0px !important;
-    -moz-overflow-clip-margin: 0px !important;
-    -ms-overflow-clip-margin: 0px !important;
-    overflow: hidden;
+  overflow: hidden;
 }
 
-
-.mylinks{
-  text-align: left;
-  margin-left: 9vw;
-  margin-right: 48%;
+//keep nav and .hello from overlapping
+@media (max-width: 768px) {
+  nav {
+    transform: translate(0%, 0%);
+  }
+  .hello {
+    transform: translate(-30%, -50%);
+  }
 }
-
-.mylinks a{
-  color: #ffffff;
-  text-shadow: #2c3e50 0 1px 3px;
-  text-decoration: none;
-  font-size: 22px;
-  padding: 8px;  
-}
-a:hover{
-    background-color: rgba(211, 102, 150, 0.1);
-    background-image: linear-gradient(120deg, #fb8dd5 0%, #e55d98 100%);
-    opacity: 0.3;
-    border-radius: 30px;
-
-  }
-/*mobile styles */
-@media only screen and (max-width: 650px){
-  html{
-    background-image: url('./assets/mobile-uc.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100% !important;
-    width: 100% !important;
-    overflow-clip-margin: 0px !important;
-    -webkit-overflow-clip-margin: 0px !important;
-    -moz-overflow-clip-margin: 0px !important;
-    -ms-overflow-clip-margin: 0px !important;
-    overflow: hidden;
-  }
-  .mainContent{
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 10%;
-    margin-bottom: 2%;
-   /* background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: #2c3e50 0.75px 0.5px 0.75px ;*/
-    font-size: calc(3px + 2vmin);
-  }
-  .mainContent h1{
-    font-size:calc(10px + 4vmin);
-  }
-  .mylinks{
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 100%;
-  }
-  .mylinks a{
-    font-size: 18px;
-  }
-
-
-}
-
-
-@media only screen and (max-width: 800px){
-  html{
-    background-image: url('./assets/tablet-uc.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100% !important;
-    width: 100% !important;
-    overflow-clip-margin: 0px !important;
-    -webkit-overflow-clip-margin: 0px !important;
-    -moz-overflow-clip-margin: 0px !important;
-    -ms-overflow-clip-margin: 0px !important;
-    overflow: hidden;
-  }
-  .mainContent{
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 10%;
-    margin-bottom: 2%;
-   /* background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: #2c3e50 0.75px 0.5px 0.75px ;*/
-    font-size: calc(3px + 2vmin);
-  }
-  .mainContent h1{
-    font-size:calc(10px + 4vmin);
-  }
-  .mylinks{
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 100%;
-  }
-  .mylinks a{
-    font-size: 18px;
-  }
-
-
-}
-
-
-
-
 </style>
