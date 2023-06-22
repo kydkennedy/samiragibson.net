@@ -8,7 +8,7 @@
       mi lectus, condimentum vel sem sed, malesuada vestibulum elit.
     </p>
     <a
-      href="samira.gibsonCHC@gmail.com"
+      href="mailto: samira.gibsonCHC@gmail.com"
       target="_blank"
       rel="noopener"
       type="email"
