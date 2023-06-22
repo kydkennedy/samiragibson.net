@@ -1,19 +1,22 @@
 <template>
   <div class="hello">
     <h2>{{ msg }}</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit
-      sodales massa. Phasellus condimentum metus vel ex fringilla mollis.
-      Suspendisse potenti. Donec id tortor non massa lobortis mollis. Maecenas
-      mi lectus, condimentum vel sem sed, malesuada vestibulum elit.
-    </p>
-    <a
-      href="mailto: samira.gibsonCHC@gmail.com"
-      target="_blank"
-      rel="noopener"
-      type="email"
-      >Drop a line!
-    </a>
+    <div>
+      <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+    </div>
   </div>
 </template>
 <script>
@@ -28,9 +31,11 @@ export default {
 @import "@/assets/globalStyles.scss";
 body {
   text-align: left;
+  height: 100%;
+  width: 100;
 }
 h3 {
-  margin: 20px 0 0;
+  margin: 0px 0 0;
   padding: 0 20px;
 }
 ul {

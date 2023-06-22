@@ -1,6 +1,6 @@
 <template>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <div class="container-main">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <nav>
       <router-link to="/" class="navi">01. Home</router-link>
       <hr />
@@ -41,22 +41,20 @@ body {
   height: 100%;
   width: 100%;
   background-color: $bg-color;
-  /*background-image: url("@/assets/nebula_star_trek.jpg");
-  background-clip: border-box;
-  background-size: cover;
-  background-attachment: fixed;*/
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
-html {
+/*html {
   position: absolute;
-}
+}*/
 
 h1 {
   font-size: 3rem;
   margin-left: 3%;
   font-family: $primary-font;
   font-weight: $bold;
+  margin-bottom: 0;
 }
 
 p {
@@ -65,7 +63,7 @@ p {
 }
 .container-main {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   box-sizing: border-box;
   display: flex;
@@ -153,7 +151,20 @@ nav {
     transform: translate(0%, 0%);
   }
   .hello {
-    transform: translate(-30%, -50%);
+    transform: translate(-20%, -50%);
+    max-height: 85vh;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-left: 3%;
+    font-family: $primary-font;
+    font-weight: $bold;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 0.7rem;
+    line-height: 1.35;
+    width: 100%;
   }
 }
 </style>

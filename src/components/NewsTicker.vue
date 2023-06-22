@@ -3,7 +3,10 @@
     <div class="ticker">
       <div class="ticker__item">{{ item1 }}</div>
       <div class="ticker__item">{{ item2 }}</div>
-      <div class="ticker__item">{{ item3 }}</div>
+      <div class="ticker__item">
+        {{ item3 }}
+        <img class="ticker_icon" src="@/assets/vulcan-hand.png" />
+      </div>
       <div class="ticker__item">{{ item4 }}</div>
     </div>
   </div>
@@ -92,6 +95,12 @@ export default {
       font-weight: $regular;
     }
   }
+}
+.ticker_icon {
+  height: 1.3rem;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  padding-bottom: 0.2rem;
 }
 
 body {

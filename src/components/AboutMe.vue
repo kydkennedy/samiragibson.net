@@ -1,12 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      I’m passionate about creating beautiful, functional and intuitive digital
-      experiences. I’m currently working as a UX/UI designer at a digital agency
-      in Philadelphia. I’m also a freelance designer and developer. I’m always
-      looking for new opportunities to collaborate on exciting projects.
-    </p>
+    <p>Philly native, dog mom x3,</p>
   </div>
 </template>
 
