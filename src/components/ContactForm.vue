@@ -2,7 +2,7 @@
   <div class="hello">
     <h2>{{ msg }}</h2>
     <div>
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="POST" netlify>
         <p>
           <label>Your Name: <input type="text" name="name" /></label>
         </p>
