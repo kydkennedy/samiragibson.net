@@ -15,7 +15,13 @@
       <input class="submit" type="submit" value="Send" />
     </form>
     <div v-if="formSubmitted">
-      <h3>Thanks! I'll be in touch shortly!</h3>
+      <h3 class="fix-margin">Thanks! I'll be in touch shortly!</h3>
+      <h4 class="fix-margin">
+        You also email me directly at:&nbsp;
+        <a href="mailto:samira.gibsonCHC@gmail.com">
+          samira.gibsonCHC@gmail.com
+        </a>
+      </h4>
     </div>
   </div>
 </template>
@@ -87,6 +93,11 @@ h3 {
   margin-left: 3%;
 }
 
+h4 {
+  padding-left: 10px;
+  margin-left: 3%;
+}
+
 textarea {
   width: 30vw !important;
   height: 10vh !important;
@@ -96,12 +107,42 @@ textarea {
   border-top: 3px solid rgb(0, 0, 0);
   border-left: 6px solid rgb(0, 0, 0);
 }
+p {
+  padding: 0 15px;
+  font-size: 0.6rem;
+  line-height: 1.35;
+  width: 100%;
+  margin: 10% 0;
+  word-wrap: normal;
+}
+
+.fix-margin {
+  margin-top: -10px;
+  max-width: 50vw;
+  margin-left: 3%;
+}
+
+a {
+  text-decoration: underline dotted 1%;
+  color: $mira-lemon;
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   input {
     width: 25vw !important;
   }
   .submit {
     width: 33vw !important;
+  }
+  p {
+    height: 2% !important;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  a {
+    font-size: 0.75rem !important;
   }
 }
 </style>

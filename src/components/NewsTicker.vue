@@ -65,7 +65,7 @@ export default {
   height: 2rem;
   padding-left: 100%;
   box-sizing: content-box;
-  background: rgb($mira-yellow, $alpha: 1);
+  background: rgb($mira-lemon, $alpha: 1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-top: 5px solid rgb(0, 0, 0);
   border-bottom: 5px solid rgb(0, 0, 0);
