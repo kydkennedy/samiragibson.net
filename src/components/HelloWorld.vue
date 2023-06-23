@@ -8,7 +8,6 @@
         developer.I’m always looking for new opportunities to collaborate on
         exciting projects.
       </p>
-      <h3>Links</h3>
       <ul>
         <div class="link-holder">
           <li class="content-links">
