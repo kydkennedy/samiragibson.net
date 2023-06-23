@@ -111,6 +111,7 @@ p {
     width: 100%;
     text-align: center;
     margin-bottom: 3%;
+    margin-left: 0 !important;
   }
   h3 {
     text-align: center;
