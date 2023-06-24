@@ -2,7 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      <a href="#" target="_blank" rel="noopener">Uploading shortly...</a>
+      While I'm looking to do more XR design, you can find a few projects I've
+      worked on recently.
     </p>
   </div>
 </template>

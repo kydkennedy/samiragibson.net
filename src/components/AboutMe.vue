@@ -1,7 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>Philly native, dog mom x3,</p>
+    <p>
+      Philly native, dog mom (x3), volunteer skateboard instructor, and I'd
+      totally love to see <em>Capt. Seven of Nine</em> in a new Star Trek show.
+    </p>
   </div>
 </template>
 
@@ -38,21 +41,13 @@ a {
 p {
   padding: 0 15px;
 }
-/*#gradient-text {
-    background-color: #f3ec78;
-    background-image: linear-gradient(
-      to top,
-      #ff9a9e 0%,
-      #fecfef 99%,
-      #fecfef 100%
-    );
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}*/
+
 .hello {
   padding: 20px;
+}
+em {
+  color: $mira-lemon;
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
 }
 </style>
