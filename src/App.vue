@@ -15,9 +15,8 @@
     <router-view class="page-content" />
   </div>
   <NewsTicker
-    item1="Content and UI subject to change throughout iterations of site redesign."
-    item2="Currently enjoying the Neo Brutalist asthetic."
-    item3="If you're reading this, ask me about my favorite Star Trek episodes."
+    item1="Currently enjoying the Neo Brutalist asthetic."
+    item2="If you're reading this, ask me about my favorite Star Trek episodes."
   />
   <!--<footer>
     <p>copyright 2023 @ Samira Gibson</p>

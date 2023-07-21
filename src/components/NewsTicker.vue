@@ -2,11 +2,11 @@
   <div class="ticker-wrap">
     <div class="ticker">
       <div class="ticker__item">{{ item1 }}</div>
-      <div class="ticker__item">{{ item2 }}</div>
       <div class="ticker__item">
-        {{ item3 }}
+        {{ item2 }}
         <img class="ticker_icon" src="@/assets/vulcan-hand.png" />
       </div>
+      <div class="ticker__item">{{ item3 }}</div>
       <div class="ticker__item">{{ item4 }}</div>
     </div>
   </div>

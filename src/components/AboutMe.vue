@@ -3,7 +3,17 @@
     <h1>{{ msg }}</h1>
     <p>
       Philly native, dog mom (x3), volunteer skateboard instructor, and I'd
-      totally love to see <em>Capt. Seven of Nine</em> in a new Star Trek show.
+      totally love to see <em>Captain Seven of Nine</em> in a new Star Trek
+      Voyager spin-off.<br /><br />
+      As a designer with dev experience, I strive to create fun and functional
+      designs that feel familiar and wholly new at the same time. I'm
+      particularly interested in content interaction, XR technologies, and
+      Machine Learning.
+      <br /><br />
+      I've been a participant at MIT's Reality Hack for the last two years
+      &#40;my team were finalists this year&#41;, it's a great place to meet
+      other enthusiasts and see XR frameworks and hardware developing in
+      realtime while working on passion projects.
     </p>
   </div>
 </template>
@@ -47,7 +57,13 @@ p {
 }
 em {
   color: $mira-lemon;
-  text-decoration: underline dotted;
-  text-underline-offset: 2px;
+  //text-decoration: underline dotted;
+  //text-underline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  p {
+    padding: 0 8px !important;
+  }
 }
 </style>
