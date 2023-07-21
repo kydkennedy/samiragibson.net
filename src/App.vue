@@ -18,17 +18,17 @@
     item1="Currently enjoying the Neo Brutalist asthetic."
     item2="If you're reading this, ask me about my favorite Star Trek episodes."
   />
-  <!--<footer>
-    <p>copyright 2023 @ Samira Gibson</p>
-  </footer>-->
+  <FooterComponent />
 </template>
 
 <script>
 import NewsTicker from "./components/NewsTicker.vue";
+import FooterComponent from "./components/FooterComponent.vue";
 export default {
   name: "App",
   components: {
     NewsTicker,
+    FooterComponent,
   },
 };
 </script>
