@@ -1,11 +1,13 @@
 <template>
   <div class="card">
-    <div class="card-image">
-      <img :src="imageSrc" alt="Project Image" />
-    </div>
-    <div class="projects">
-      <h3>{{ title }}</h3>
-      <p class="desc">{{ desc }}</p>
+    <div>
+      <div class="card-image">
+        <img :src="imageSrc" alt="Project Image" />
+      </div>
+      <div class="projects">
+        <h3>{{ title }}</h3>
+        <p class="desc">{{ desc }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -56,8 +58,8 @@ p {
 }
 
 .card {
-  position: fixed;
-  top: 60%;
+  position: absolute;
+  //margin-top: 3rem;
   left: 51%;
   transform: translate(-30%, -55%);
   padding: 5px;
@@ -80,7 +82,16 @@ p {
   max-height: 75vh;
   text-align: left;
   overflow: hidden;
-  margin: 5px 0;
+  z-index: -1;
+  margin: 7rem 0;
+}
+
+.card-image {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  padding-bottom: 0.2rem;
+  padding: 5px;
+  display: inline-block;
 }
 img {
   width: 10vw;
@@ -91,11 +102,7 @@ h1 {
   margin-left: 3%;
   margin-bottom: 3%;
 }
-.card-image {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-}
+
 @media (max-width: 768px) {
   p {
     padding: 0 8px !important;

@@ -3,11 +3,18 @@
     <div>
       <ProjectComponent />
     </div>
-    <div>
+    <div id="project-one">
       <ProjectCard
-        imageSrc="../assets/"
+        imageSrc="https://via.placeholder.com/100"
         title="The Philly We Were Promised"
-        desc="A VR experience that takes you back to the 1876 Centennial Exhibition"
+        desc="An interactive map view showing how Philadelphia could've looked if the city had followed through on its plans to revitalize in the early 2000s."
+      />
+    </div>
+    <div class="project-two">
+      <ProjcetCard
+        imageSrc="https://via.placeholder.com/100"
+        title="Philly Icons We Loved in 2022"
+        desc="A Philadelphia Inquirer interactive poll of the city's favorite icons, from Quinta Brunson to Gritty. Who's your fave of 2022? "
       />
     </div>
   </div>
@@ -41,45 +48,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-  margin-top: 20px;
-}
-
-.card {
-  position: absolute;
-  margin-top: 3rem;
-  left: 51%;
-  transform: translate(-30%, -55%);
-  padding: 5px;
-  border-radius: 5px;
-  color: #000000;
-  text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
-  /* glassmorphism background*/
-  background: $mira-blue;
-  border-radius: 80px;
-  border-bottom: 23px solid rgb(0, 0, 0);
-  border-right: 15px solid rgb(0, 0, 0);
-  border-top: 6px solid rgb(0, 0, 0);
-  border-left: 9px solid rgb(0, 0, 0);
-  //keep .hello vertically centered
-  display: flex;
-  flex-direction: row;
-  grid-template-rows: 2fr 1fr 1fr;
-  flex-wrap: wrap;
-  max-width: 80vw;
-  max-height: 75vh;
-  text-align: left;
-  overflow: hidden;
-  z-index: -1;
-  margin: 5px 0;
-}
-
-.card-image {
-  height: 1rem;
-  vertical-align: middle;
-  margin-right: 0.5rem;
-  padding-bottom: 0.2rem;
-  padding: 5px;
-  display: inline-block;
 }
 body {
   text-align: left;
