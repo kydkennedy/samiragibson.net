@@ -1,19 +1,11 @@
 <template>
   <div class="card">
-    <div class="card-img"><img :src="imageUrl" /></div>
-    <v-img
-      class="card-img"
-      :width="348"
-      aspect-ratio="16/9"
-      cover
-      src="@/assets/logo.png"
-    >
-    </v-img>
-    <div class="card-title">
-      <h3>{{ title }}</h3>
+    <div class="card-image">
+      <img :src="imageSrc" alt="Project Image" />
     </div>
-    <div class="card-desc">
-      <p>{{ desc }}</p>
+    <div class="projects">
+      <h3>{{ title }}</h3>
+      <p class="desc">{{ desc }}</p>
     </div>
   </div>
 </template>
@@ -25,7 +17,11 @@ export default {
   props: {
     title: String,
     desc: String,
-    imgUrl: String,
+    imageSrc: {
+      type: String,
+      default: "https://via.placeholder.com/100",
+      required: false,
+    },
   },
 };
 </script>
@@ -58,20 +54,7 @@ p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/*#gradient-text {
-  background-color: #f3ec78;
-  background-image: linear-gradient(
-    to top,
-    #ff9a9e 0%,
-    #fecfef 99%,
-    #fecfef 100%
-  );
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}*/
+
 .card {
   position: fixed;
   top: 60%;

@@ -1,19 +1,17 @@
 <template>
   <div class="projects">
-    <h1>{{ msg }}</h1>
-    <p class="intro">
-      While I'm looking to do more XR design, you can find a few projects I've
-      worked on recently.
+    <h1>Projects</h1>
+    <p>
+      Currently with volunteering @ BarCamp Philly and RWTH as a web designer
+      and dev.
     </p>
   </div>
 </template>
 
 <script>
+//import ProjectCard from "@/components/ProjectCard.vue";
 export default {
   name: "ProjectComponent",
-  props: {
-    msg: String,
-  },
 };
 </script>
 
@@ -36,7 +34,7 @@ a {
   color: $tertiary-color;
 }
 p {
-  padding: 0 15px;
+  padding: 0 1.3rem;
 }
 
 .projects {
@@ -48,7 +46,6 @@ p {
   border-radius: 5px;
   color: #000000;
   text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
-  /* glassmorphism background*/
   background: $mira-blue;
   border-radius: 80px;
   border-bottom: 23px solid rgb(0, 0, 0);
@@ -63,7 +60,9 @@ p {
   max-height: 75vh;
   text-align: left;
   overflow: hidden;
+  padding-bottom: 1.3rem;
 }
+//moves each project card addded to this component down on the page so they don't overlap
 @media (max-width: 768px) {
   p {
     padding: 0 8px !important;

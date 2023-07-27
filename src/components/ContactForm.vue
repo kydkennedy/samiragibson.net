@@ -17,7 +17,7 @@
     <div v-if="formSubmitted">
       <h3 class="fix-margin">Thanks! I'll be in touch shortly!</h3>
       <h4 class="fix-margin">
-        You also email me directly at:&nbsp;
+        You can email me directly at:&nbsp;
         <a href="mailto:samira.gibsonCHC@gmail.com">
           samira.gibsonCHC@gmail.com
         </a>
