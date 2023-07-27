@@ -1,34 +1,26 @@
 <template>
   <div class="project">
-    <ProjectComponent
-      msg="
-      Projects"
-    />
-    <div class="card">
-      <div class="card-img">
-        <img src="@/assets/logo.png" />
-        <div class="card-title">
-          <h3>The Philly We Were Promised</h3>
-        </div>
-      </div>
-      <div class="card-desc">
-        <p>
-          A look at sites and attractions planned for the City of Philadelphia,
-          but never built.
-        </p>
-      </div>
+    <div>
+      <ProjectComponent />
+    </div>
+    <div>
+      <ProjectCard
+        imageSrc="../assets/"
+        title="The Philly We Were Promised"
+        desc="A VR experience that takes you back to the 1876 Centennial Exhibition"
+      />
     </div>
   </div>
 </template>
-
 <script>
 // @ is an alias to /src
 import ProjectComponent from "@/components/ProjectComponent.vue";
-//import ProjectCard from "@/components/ProjectCard.vue";
+import ProjectCard from "@/components/ProjectCard.vue";
 export default {
   name: "ProjectsView",
   components: {
     ProjectComponent: ProjectComponent,
+    ProjectCard: ProjectCard,
   },
   props: {
     msg: String,
@@ -49,14 +41,12 @@ export default {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-}
-p {
-  padding: 0 15px;
+  margin-top: 20px;
 }
 
 .card {
-  position: fixed;
-  top: 60%;
+  position: absolute;
+  margin-top: 3rem;
   left: 51%;
   transform: translate(-30%, -55%);
   padding: 5px;
@@ -79,6 +69,7 @@ p {
   max-height: 75vh;
   text-align: left;
   overflow: hidden;
+  z-index: -1;
   margin: 5px 0;
 }
 
@@ -89,5 +80,29 @@ p {
   padding-bottom: 0.2rem;
   padding: 5px;
   display: inline-block;
+}
+body {
+  text-align: left;
+}
+h3 {
+  margin: 20px 0 0;
+  padding: 0 20px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: $tertiary-color;
+}
+p {
+  padding: 1.2rem 3rem;
+}
+h1 {
+  padding: 1.5rem 15px 0rem 3rem;
 }
 </style>
