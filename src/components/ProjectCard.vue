@@ -74,15 +74,12 @@ p {
   border-top: 6px solid rgb(0, 0, 0);
   border-left: 9px solid rgb(0, 0, 0);
   //keep .hello vertically centered
-  display: flex;
-  flex-direction: row;
-  grid-template-rows: 2fr 1fr 1fr;
-  flex-wrap: wrap;
+  display: block;
   max-width: 80vw;
   max-height: 75vh;
   text-align: left;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
   margin: 7rem 0;
 }
 
