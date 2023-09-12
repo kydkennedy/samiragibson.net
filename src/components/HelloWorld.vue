@@ -8,7 +8,7 @@
         developer.I’m always looking for new opportunities to collaborate on
         exciting projects.
       </p>
-      <ul>
+      <ul class="links-list">
         <div class="link-holder">
           <li class="content-links">
             <a
@@ -65,6 +65,7 @@ ul {
   padding: 0 10px;
   display: flex;
   flex-direction: row;
+  margin: 1rem 0;
 }
 li {
   display: inline-block;
@@ -101,6 +102,7 @@ p {
   text-align: center;
   width: 25%;
   margin-left: 3%;
+  padding: 2px 0 12px 0;
 }
 
 @media (max-width: 768px) {

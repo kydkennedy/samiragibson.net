@@ -1,12 +1,22 @@
 <template>
   <div class="ticker-wrap">
     <div class="ticker">
-      <div class="ticker__item">{{ item1 }}</div>
+      <div class="ticker__item">
+        {{ item1 }}
+        <img class="ticker_icon" />
+        <!--<hr class="ticker_hr" />-->
+      </div>
+
       <div class="ticker__item">
         {{ item2 }}
         <img class="ticker_icon" src="@/assets/vulcan-hand.png" />
+        <!--<hr class="ticker_hr" />-->
       </div>
-      <div class="ticker__item">{{ item3 }}</div>
+
+      <div class="ticker__item">
+        {{ item3 }}
+        <img class="ticker_icon" src="@/assets/wedding-ring.png" />
+      </div>
       <div class="ticker__item">{{ item4 }}</div>
     </div>
   </div>
@@ -102,6 +112,14 @@ export default {
   margin-left: 0.5rem;
   padding-bottom: 0.2rem;
 }
+
+/*.ticker_hr {
+  border: 1px solid rgba($primary, $alpha: 1);
+  height: 2px;
+  width: 2px;
+  align-self: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+}*/
 
 body {
   padding-bottom: 5rem;

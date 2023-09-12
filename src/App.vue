@@ -17,6 +17,7 @@
   <NewsTicker
     item1="Currently enjoying the Neo Brutalist asthetic."
     item2="If you're reading this, ask me about my favorite Star Trek episodes."
+    item3="Recently Married!"
   />
   <FooterComponent />
 </template>
@@ -44,7 +45,12 @@ body {
   width: 100%;
   background-color: $bg-color;
   scroll-behavior: smooth;
+}
+
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /*html {
@@ -117,6 +123,9 @@ nav {
   hr {
     border: 1px solid rgba($primary, $alpha: 1);
     height: 5%;
+    width: 2px;
+    align-self: center;
+    margin: 5px 0;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
   }
   justify-content: center;
