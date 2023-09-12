@@ -15,7 +15,7 @@
 
       <div class="ticker__item">
         {{ item3 }}
-        <img class="ticker_icon" src="@/assets/wedding-ring.png" />
+        <img class="ticker_icon" src="@/assets/wedding-ring-alt.png" />
       </div>
       <div class="ticker__item">{{ item4 }}</div>
     </div>
