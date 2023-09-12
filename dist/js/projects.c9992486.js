@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunksamiragibson_net"]=self["webpackChunksamiragibson_net"]||[]).push([[176],{2022:function(n,r,s){s.r(r),s.d(r,{default:function(){return o}});var e=s(3396);const t={class:"projects"};function a(n,r){return(0,e.wg)(),(0,e.iD)("div",t)}var c=s(89);const i={},u=(0,c.Z)(i,[["render",a]]);var o=u}}]);
-//# sourceMappingURL=projects.c9992486.js.map

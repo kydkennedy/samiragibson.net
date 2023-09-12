@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunksamiragibson_net"]=self["webpackChunksamiragibson_net"]||[]).push([[242],{509:function(n,e,r){r.r(e),r.d(e,{default:function(){return o}});var s=r(3396),t=r(7139);function a(n,e,r,a,i,u){return(0,s.wg)(),(0,s.iD)("div",null,(0,t.zw)(r.msg),1)}var i={name:"ProjectView",props:{msg:String}},u=r(89);const c=(0,u.Z)(i,[["render",a],["__scopeId","data-v-2e25928d"]]);var o=c}}]);
+//# sourceMappingURL=project.05398b05.js.map
