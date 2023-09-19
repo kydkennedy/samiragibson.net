@@ -60,10 +60,10 @@ p {
 }
 
 .card {
-  position: absolute;
+  position: relative;
   //margin-top: 3rem;
   left: 51%;
-  transform: translate(-30%, -55%);
+  transform: translate(-30%, -75%);
   padding: 5px;
   border-radius: 5px;
   color: #000000;
