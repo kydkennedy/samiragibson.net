@@ -50,6 +50,7 @@ a {
 }
 p {
   padding: 0 15px;
+  margin: 1rem 0;
 }
 
 .hello {

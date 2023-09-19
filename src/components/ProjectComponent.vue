@@ -13,7 +13,7 @@
             href="https://2023.barcampphilly.org/"
             target="_blank"
             rel="noopener"
-            >BarCamp Philly 14
+            >BarCamp Philly
           </a>
         </li>
       </div>
@@ -33,7 +33,7 @@
             href="https://www.figma.com/proto/qLaRbVzbAd3AAq2uPUuz2T/Interactive-Article-Planned-Philadelphia-CS?type=design&node-id=3-12&t=IHziU6jErZNT9rjB-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=3%3A12&mode=design"
             target="_blank"
             rel="noopener"
-            >Case Study–TPWWP
+            >Inquirer Case Study
           </a>
         </li>
       </div>
@@ -65,18 +65,20 @@ ul {
   padding: 0 10px;
   display: flex;
   flex-direction: row;
-  margin: 1rem 0;
+  align-items: center;
 }
 li {
   display: inline-block;
-  margin: 0 10px;
+  padding: 0 20px;
 }
 a {
   color: $primary;
   text-decoration: none;
+  font-size: 0.9rem;
 }
 p {
   padding: 0 1.3rem;
+  margin: 1rem 0;
 }
 h1 {
   padding: 0 20px;
