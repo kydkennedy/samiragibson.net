@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h3>{{ msg }}</h3>
+    <h1 id="title">{{ msg }}</h1>
     <form @submit.prevent="submitForm" v-if="!formSubmitted" data-netlify>
       <span>Full Name</span><br />
       <input v-model="name" type="text" placeholder="Enter your name" /><br />
@@ -51,7 +51,7 @@ form {
   padding: 10px;
   width: max-content;
   margin-left: 3%;
-  margin-top: -20px;
+  margin-top: 10px;
 }
 
 input {
@@ -68,6 +68,10 @@ span {
   font-size: 18px;
   margin: 4px;
   font-weight: 500;
+}
+
+.hello {
+  padding: 20px;
 }
 
 .submit {
@@ -88,9 +92,31 @@ span {
   border-radius: 8px;
 }
 h3 {
-  font-size: 40px;
-  padding-left: 10px;
-  margin-left: 3%;
+  margin: 20px 0 0;
+  padding: 0 20px;
+}
+ul {
+  list-style-type: none;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: $primary;
+  text-decoration: none;
+  margin-top: 2%;
+}
+p {
+  padding: 0 15px;
+  margin: 1rem 0;
+}
+.hello {
+  padding: 20px;
 }
 
 h4 {
@@ -107,25 +133,11 @@ textarea {
   border-top: 3px solid rgb(0, 0, 0);
   border-left: 6px solid rgb(0, 0, 0);
 }
-p {
-  padding: 0 15px;
-  font-size: 0.6rem;
-  line-height: 1.35;
-  width: 100%;
-  margin: 10% 0;
-  word-wrap: normal;
-}
 
 .fix-margin {
   margin-top: -10px;
   max-width: 50vw;
   margin-left: 3%;
-}
-
-a {
-  text-decoration: underline dotted 1%;
-  color: $mira-lemon;
-  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -143,6 +155,11 @@ a {
   }
   a {
     font-size: 0.75rem !important;
+  }
+  .hello {
+    transform: translate(-27%, -54%) !important;
+    max-height: 85vh;
+    width: 62%;
   }
 }
 </style>

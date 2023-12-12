@@ -2,7 +2,7 @@
   <div class="contact">
     <ContactForm
       msg="
-      Wanna chat or make something cool? Let’s get in touch!"
+      Let's Chat!"
     />
   </div>
 </template>
@@ -19,3 +19,12 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+@import "@/assets/globalStyles.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+</style>

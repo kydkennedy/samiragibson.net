@@ -30,41 +30,53 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "@/assets/globalStyles.scss";
-body {
-  text-align: left;
-}
+
 h3 {
   margin: 20px 0 0;
   padding: 0 20px;
 }
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
 }
 li {
   display: inline-block;
   margin: 0 10px;
 }
 a {
-  color: $tertiary-color;
+  color: $primary;
+  text-decoration: none;
+  margin-top: 2%;
 }
 p {
   padding: 0 15px;
   margin: 1rem 0;
 }
-
-.hello {
-  padding: 20px;
-}
 em {
   color: $mira-lemon;
-  //text-decoration: underline dotted;
-  //text-underline-offset: 2px;
+  text-shadow: rgba(0, 0, 0, 0.3);
+}
+.hello {
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
   p {
-    padding: 0 8px !important;
+    padding: 0 5px;
+    text-wrap: wrap;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .hello {
+    transform: translate(-27%, -54%) !important;
+    max-height: 85vh;
+    width: 62%;
   }
 }
 </style>

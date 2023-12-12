@@ -25,6 +25,8 @@
 <script>
 import NewsTicker from "./components/NewsTicker.vue";
 import FooterComponent from "./components/FooterComponent.vue";
+//import Vue from "vue";
+//import VueMq from "vue-mq";
 export default {
   name: "App",
   components: {
@@ -32,10 +34,18 @@ export default {
     FooterComponent,
   },
 };
+/*Vue.use(VueMq, {
+  breakpoints: {
+    mobile: 450,
+    tablet: 900,
+    laptop: 1250,
+  },
+});*/
 </script>
 
 <style lang="scss">
 @import "@/assets/globalStyles.scss";
+
 html,
 body {
   margin: 0;
@@ -148,7 +158,7 @@ nav {
   border-left: 9px solid rgb(0, 0, 0);
   //keep .hello vertically centered
   display: flex;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   flex-direction: column;
   max-width: 80vw;
   max-height: 75vh;
@@ -160,7 +170,10 @@ nav {
 @media (max-width: 768px) {
   nav {
     transform: translate(0%, 0%);
+    max-width: 30%;
+    //text-align: center;
   }
+
   .hello {
     transform: translate(-20%, -50%);
     max-height: 85vh;

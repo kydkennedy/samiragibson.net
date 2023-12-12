@@ -1,5 +1,5 @@
 <template>
-  <div class="projects">
+  <div class="hello">
     <h1>Projects</h1>
     <p>
       Currently volunteering @ BarCamp Philly, Eastern Service Workers
@@ -13,7 +13,7 @@
             href="https://2023.barcampphilly.org/"
             target="_blank"
             rel="noopener"
-            >BarCamp Philly
+            >BarCamp 14
           </a>
         </li>
       </div>
@@ -23,7 +23,7 @@
             href="https://www.inquirer.com/news/philadelphia/inq2/philadelphia-development-projects-stadiums-parks-venues-failed-20221130.html"
             target="_blank"
             rel="noopener"
-            >The Philly We Were Promised
+            >Planned Philly
           </a>
         </li>
       </div>
@@ -33,7 +33,7 @@
             href="https://www.figma.com/proto/qLaRbVzbAd3AAq2uPUuz2T/Interactive-Article-Planned-Philadelphia-CS?type=design&node-id=3-12&t=IHziU6jErZNT9rjB-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=3%3A12&mode=design"
             target="_blank"
             rel="noopener"
-            >Inquirer Case Study
+            >Inq C.S.
           </a>
         </li>
       </div>
@@ -51,11 +51,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "@/assets/globalStyles.scss";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 h3 {
   margin: 20px 0 0;
   padding: 0 20px;
@@ -65,49 +60,23 @@ ul {
   padding: 0 10px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  margin: 1rem 0;
 }
 li {
   display: inline-block;
-  padding: 0 20px;
+  margin: 0 10px;
 }
 a {
   color: $primary;
   text-decoration: none;
-  font-size: 0.9rem;
+  margin-top: 2%;
 }
 p {
-  padding: 0 1.3rem;
+  padding: 0 15px;
   margin: 1rem 0;
 }
-h1 {
-  padding: 0 20px;
-}
-
-.projects {
-  position: absolute;
-  top: 40%;
-  left: 51%;
-  transform: translate(-30%, -25%); //-55% when adding second card
-  padding: 5px;
-  border-radius: 5px;
-  color: #000000;
-  text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
-  background: $mira-blue;
-  border-radius: 80px;
-  border-bottom: 23px solid rgb(0, 0, 0);
-  border-right: 15px solid rgb(0, 0, 0);
-  border-top: 6px solid rgb(0, 0, 0);
-  border-left: 9px solid rgb(0, 0, 0);
-  //keep .hello vertically centered
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  max-width: 80vw;
-  max-height: 75vh;
-  text-align: left;
-  overflow: hidden;
-  padding-bottom: 1.3rem;
+.hello {
+  padding: 20px;
 }
 .content-links {
   font-family: $primary-font;
@@ -129,25 +98,35 @@ h1 {
   text-align: center;
   width: 25%;
   margin-left: 3%;
-  padding: 2px 0 12px 0;
+  padding: 0px 0 20px 0;
 }
-//moves each project card addded to this component down on the page so they don't overlap
+
 @media (max-width: 768px) {
   p {
-    padding: 0 1.3rem !important;
+    padding: 0 5px;
   }
   .link-holder {
     width: 100%;
     text-align: center;
     margin-bottom: 3%;
     margin-left: 0 !important;
+    height: 50px;
   }
+
+  .link-holder li {
+    padding-bottom: 2px;
+  }
+
   h3 {
     text-align: center;
   }
 
   ul {
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+  .hello {
+    transform: translate(-27%, -54%) !important;
+    max-height: 85vh;
   }
 }
 </style>

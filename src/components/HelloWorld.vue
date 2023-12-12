@@ -103,7 +103,7 @@ p {
   text-align: center;
   width: 25%;
   margin-left: 3%;
-  padding: 2px 0 12px 0;
+  padding: 0px 0 20px 0;
 }
 
 @media (max-width: 768px) {
@@ -115,13 +115,23 @@ p {
     text-align: center;
     margin-bottom: 3%;
     margin-left: 0 !important;
+    height: 50px;
   }
+
+  .link-holder li {
+    padding-bottom: 2px;
+  }
+
   h3 {
     text-align: center;
   }
 
   ul {
     flex-direction: column-reverse;
+  }
+  .hello {
+    transform: translate(-27%, -54%) !important;
+    max-height: 85vh;
   }
 }
 </style>
