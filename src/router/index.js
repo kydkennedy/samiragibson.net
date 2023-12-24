@@ -22,12 +22,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "projects" */ "../views/ProjectsView.vue"),
   },
-  {
-    path: "/projects/:id",
-    name: "project",
-    component: () =>
-      import(/* webpackChunkName: "project" */ "../views/ProjectView.vue"),
-  },
+
   {
     path: "/contact",
     name: "contact",
@@ -39,18 +34,6 @@ const routes = [
     name: "music",
     component: () =>
       import(/* webpackChunkName: "music" */ "../views/MusicView.vue"),
-  },
-  {
-    path: "/blog",
-    name: "blog",
-    component: () =>
-      import(/* webpackChunkName: "blog" */ "../views/BlogView.vue"),
-  },
-  {
-    path: "/blog/:id",
-    name: "blog-post",
-    component: () =>
-      import(/* webpackChunkName: "blog-post" */ "../views/BlogPostView.vue"),
   },
 ];
 

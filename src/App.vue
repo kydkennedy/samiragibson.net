@@ -1,23 +1,25 @@
+<script setup>
+import { RouterLink, RouterView } from "vue-router";
+</script>
 <template>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <div class="container-main">
     <nav>
-      <router-link to="/" class="navi">01. Home</router-link>
+      <RouterLink to="/" class="navi">01. Home</RouterLink>
       <hr />
-      <router-link to="/about" class="navi">02. About</router-link>
+      <RouterLink to="/about" class="navi">02. About</RouterLink>
       <hr />
-      <router-link to="/projects" class="navi">03. Projects</router-link>
+      <RouterLink to="/projects" class="navi">03. Projects</RouterLink>
       <hr />
-      <router-link to="/contact" class="navi">04. Contact</router-link>
+      <RouterLink to="/contact" class="navi">04. Contact</RouterLink>
       <!--<hr />
       <router-link to="/blog" class="navi">05. Blog</router-link>-->
     </nav>
     <router-view class="page-content" />
   </div>
   <NewsTicker
-    item1="Currently enjoying the Neo Brutalist asthetic."
+    item1="Happy Holidays!!!"
     item2="If you're reading this, ask me about my favorite Star Trek episodes."
-    item3="Recently Married!"
   />
   <FooterComponent />
 </template>
