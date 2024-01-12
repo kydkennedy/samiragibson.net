@@ -5,7 +5,7 @@ import ProjectsViewVue from "@/views/ProjectsView.vue";
 import ContactViewVue from "@/views/ContactView.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL),
   routes: [
     {
       path: "/",
@@ -13,7 +13,7 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "#about",
+      path: "/about",
       name: "about",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
