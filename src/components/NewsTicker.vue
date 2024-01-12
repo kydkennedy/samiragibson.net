@@ -9,7 +9,7 @@
 
       <div class="ticker__item">
         {{ item2 }}
-        <img class="ticker_icon" src="@/assets/vulcan-hand.png" />
+        <img class="ticker_icon" />
         <!--<hr class="ticker_hr" />-->
       </div>
 
