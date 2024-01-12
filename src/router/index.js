@@ -20,18 +20,18 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       /*component: () =>
         import(/* webpackChunkName: "about" "../views/AboutView.vue")*/
-      component: () => AboutViewVue,
+      component: AboutViewVue,
     },
     {
       path: "/projects",
       name: "projects",
-      component: () => ProjectsViewVue,
+      component: ProjectsViewVue,
     },
 
     {
       path: "/contact",
       name: "contact",
-      component: () => ContactViewVue,
+      component: ContactViewVue,
     },
     {
       path: "/music",
