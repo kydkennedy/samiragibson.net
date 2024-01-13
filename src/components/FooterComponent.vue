@@ -1,7 +1,9 @@
 <template>
   <div>
     <footer>
-      <p>copyright 2023 <b>@</b> SamiraGibson.net</p>
+      <p>
+        copyright <span id="year">{{ theYear }}</span> <b>@</b> SamiraGibson.net
+      </p>
     </footer>
   </div>
 </template>
@@ -9,6 +11,13 @@
 <script>
 export default {
   name: "Footer-Component",
+  computed: {
+    theYear() {
+      var year = new Date();
+      var showYear = year.getFullYear();
+      return showYear;
+    },
+  },
 };
 </script>
 
