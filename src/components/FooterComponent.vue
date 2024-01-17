@@ -39,7 +39,6 @@ footer {
   border-bottom: 5px solid rgb(0, 0, 0);
   display: flex;
   justify-content: center;
-  align-items: center;
   font-family: $primary-font;
   font-weight: $regular;
   color: $primary;
