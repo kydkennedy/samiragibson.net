@@ -12,7 +12,7 @@
         <div class="link-holder">
           <li class="content-links">
             <a
-              href="https://www.dropbox.com/s/lfjv1hnzkhfi5ws/samira_gibson_2023-compressed.pdf?dl=0"
+              href="../../public/sg_2024_resume_prod-compressed.pdf"
               target="_blank"
               rel="noopener"
               >Resume
@@ -22,7 +22,7 @@
         <div class="link-holder">
           <li class="content-links">
             <a
-              href="https://www.linkedin.com/in/samira-gibson-02429436/"
+              href="https://www.linkedin.com/in/samira-gibson-wages-02429436/"
               target="_blank"
               rel="noopener"
               >LinkedIn
